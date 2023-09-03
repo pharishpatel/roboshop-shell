@@ -30,7 +30,7 @@ else
 fi
 }
 
- cp mongodb.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+ cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 
  VALIDATE $? "copied Mongodb repo to yum.repos"
 
