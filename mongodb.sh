@@ -2,7 +2,7 @@
 
 # our programme goal is install mysql
 
-DATE=(date +%F)
+DATE=$(date +%F)
 LOGSIR=/tmp
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
