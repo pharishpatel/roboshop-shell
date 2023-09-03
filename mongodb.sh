@@ -3,9 +3,9 @@
 # our programme goal is install mysql
 
 DATE=(date +%F)
-LOGDIR=/tmp
+LOGSIR=/tmp
 SCRIPT_NAME=$0
-LOGFILE=$LOGDIR/$0-$DATE.log
+LOGFILE=$LOGSDIR/$0-$DATE.log
 USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
@@ -14,10 +14,8 @@ Y="\e[33m"
 
 if [ $USERID -ne 0 ]
 then 
-   echo "$R ERROR:: please run the script with root access $N"
+   echo -e "$R ERROR:: please run the script with root access $N"
    exit 1
-# else 
-#     echo "INFO:: you are not user"
 fi
 #this function should validate previious command and inform user success or failure
 
