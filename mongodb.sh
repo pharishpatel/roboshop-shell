@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# our programme goal is install mysql
+
 
 DATE=$(date +%F)
 LOGSDIR=/tmp
@@ -34,22 +34,22 @@ fi
 
  VALIDATE $? "copied Mongodb repo to yum.repos"
 
- yum install mongodb-org -y $LOGFILE
+ yum install mongodb-org -y &>> $LOGFILE
 
   VALIDATE $? "Insatlled Mongodb"
 
-systemctl enable mongod $LOGFILE
+systemctl enable mongod &>> $LOGFILE
 
 VALIDATE $? "Enabling Mongodb"
 
-systemctl start mongod $LOGFILE
+systemctl start mongod &>> $LOGFILE
 
 VALIDATE $? "Starting Mongodb"
 
-sed -i 's/127.0.0.0/0.0.0.0/' /etc/mongod.conf $LOGFILE
+sed -i 's/127.0.0.0/0.0.0.0/' /etc/mongod.conf &>>$LOGFILE
 
 VALIDATE $? "Edited Mongodb conf"
 
-systemctl restart mongod $LOGFILE
+systemctl restart mongod &>> $LOGFILE
 
 VALIDATE $? "Restarting Mongodb"
