@@ -3,7 +3,7 @@
 # our programme goal is install mysql
 
 DATE=$(date +%F)
-LOGSIR=/tmp
+LOGSDIR=/tmp
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
 USERID=$(id -u)
