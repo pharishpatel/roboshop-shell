@@ -54,4 +54,4 @@ VALIDATE $? "Edited Mongodb conf"
 
 systemctl restart mongod $LOGFILE
 
-VALIDATE $? "Restarting Mongod"
+VALIDATE $? "Restarting Mongodb"
